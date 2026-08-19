@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Button stopButton;
     [SerializeField] public Vector2 direction;
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] GameObject directionArrow;
 
     public bool start;
 
@@ -35,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         stopButton.gameObject.SetActive(true);
         start = true;
         direction = new Vector2(1, 0);
+        directionArrow.SetActive(false);
     }
 
     public void StopPlayer()
@@ -46,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(0, 0);
         transform.position = startingPos;
         GameObject[] arrows = GameObject.FindGameObjectsWithTag("Arrow");
+        directionArrow.SetActive(true);
         for (int i = 0; i < arrows.Length; i++)
             arrows[i].GetComponent<ArrowRotation>().touched = false;
     }

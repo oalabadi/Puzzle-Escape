@@ -21800,6 +21800,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 7789904000506163864, guid: aa3a3890c29e4ff4492bfa44a5aa7a7d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -467.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789904000506163864, guid: aa3a3890c29e4ff4492bfa44a5aa7a7d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 82.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789904000506163864, guid: aa3a3890c29e4ff4492bfa44a5aa7a7d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789904000506163864, guid: aa3a3890c29e4ff4492bfa44a5aa7a7d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789904000506163864, guid: aa3a3890c29e4ff4492bfa44a5aa7a7d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789904000506163864, guid: aa3a3890c29e4ff4492bfa44a5aa7a7d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789904000506163864, guid: aa3a3890c29e4ff4492bfa44a5aa7a7d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 8083252430408876164, guid: aa3a3890c29e4ff4492bfa44a5aa7a7d, type: 3}
       propertyPath: m_Camera
       value: 
@@ -21809,6 +21837,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa3a3890c29e4ff4492bfa44a5aa7a7d, type: 3}
+--- !u!1 &977714748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7379837109262809741, guid: aa3a3890c29e4ff4492bfa44a5aa7a7d, type: 3}
+  m_PrefabInstance: {fileID: 977714747}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &977714749 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2618603207954211583, guid: aa3a3890c29e4ff4492bfa44a5aa7a7d, type: 3}
@@ -34269,6 +34302,7 @@ MonoBehaviour:
   stopButton: {fileID: 977714749}
   direction: {x: 0, y: 0}
   rb: {fileID: 0}
+  directionArrow: {fileID: 977714748}
   start: 0
 --- !u!50 &1634472174
 Rigidbody2D:
