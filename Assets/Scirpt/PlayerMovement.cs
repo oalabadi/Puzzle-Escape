@@ -3,15 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum PlayerDirection
+{
+    up,
+    down,
+    left,
+    right
+}
+
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float speed = 1f;
     [SerializeField] Vector3 startingPos;
     [SerializeField] public Button playButton;
     [SerializeField] Button stopButton;
-    [SerializeField] public Vector2 direction;
+    [SerializeField] public PlayerDirection startingDir;
     [SerializeField] Rigidbody2D rb;
-    [SerializeField] GameObject directionArrow;
+    [SerializeField] GameObject PlayerDirectionArrow;
 
     public bool start;
 
@@ -21,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-
+    public Vector2 direction;
     void Update()
     {
         if (start)
@@ -35,8 +43,16 @@ public class PlayerMovement : MonoBehaviour
         playButton.gameObject.SetActive(false);
         stopButton.gameObject.SetActive(true);
         start = true;
-        direction = new Vector2(1, 0);
-        directionArrow.SetActive(false);
+        if (startingDir == PlayerDirection.right)
+            direction = new Vector2(1, 0);
+        else if (startingDir == PlayerDirection.up)
+            direction = new Vector2(0, 1);
+        else if (startingDir == PlayerDirection.down)
+            direction = new Vector2(0, -1);
+        else
+            direction = new Vector2(-1, 0);
+        
+        PlayerDirectionArrow.SetActive(false);
     }
 
     public void StopPlayer()
@@ -48,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(0, 0);
         transform.position = startingPos;
         GameObject[] arrows = GameObject.FindGameObjectsWithTag("Arrow");
-        directionArrow.SetActive(true);
+        PlayerDirectionArrow.SetActive(true);
         for (int i = 0; i < arrows.Length; i++)
             arrows[i].GetComponent<ArrowRotation>().touched = false;
     }

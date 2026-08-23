@@ -19,26 +19,39 @@ public class ArrowRotation : MonoBehaviour
     [SerializeField] private Direction direction;
     [SerializeField] Transform player;
 
-    Vector2 moveDirection;
+    public Vector2 moveDirection;
     PlayerMovement pm;
 
     public bool touched;
 
-    int rotation;
+    public int rotation;
     float rotate;
     float vel;
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         pm = player.GetComponent<PlayerMovement>();
         if (direction == Direction.right)
+        {
             rotation = 0;
+            moveDirection = new Vector2(1, 0);
+        }
         else if (direction == Direction.down)
+        {
             rotation = -90;
+            moveDirection = new Vector2(0, -1);
+        }
         else if (direction == Direction.left)
+        {
             rotation = -180;
+            moveDirection = new Vector2(-1, 0);
+        }
         else if (direction == Direction.up)
+        {
             rotation = 90;
+            moveDirection = new Vector2(0, 1);
+        }
 
         rotate = rotation;
         transform.rotation = Quaternion.Euler(0, 0, Mathf.RoundToInt(rotate));
@@ -63,22 +76,22 @@ public class ArrowRotation : MonoBehaviour
 
     void Update()
     {
-        if (rotation == 0)
-        {
-            moveDirection = new Vector2(1, 0);
-        }
-        else if (rotation == -90)
-        {
-            moveDirection = new Vector2(0, -1);
-        }
-        else if (rotation == -180)
-        {
-            moveDirection = new Vector2(-1, 0);
-        }
-        else
-        {
-            moveDirection = new Vector2(0, 1);
-        }
+        //if (rotation == 0)
+        //{
+        //    moveDirection = new Vector2(1, 0);
+        //}
+        //else if (rotation == -90)
+        //{
+        //    moveDirection = new Vector2(0, -1);
+        //}
+        //else if (rotation == -180)
+        //{
+        //    moveDirection = new Vector2(-1, 0);
+        //}
+        //else
+        //{
+        //    moveDirection = new Vector2(0, 1);
+        //}
 
         if (isRotating)
         {
@@ -117,5 +130,25 @@ public class ArrowRotation : MonoBehaviour
         isRotating = false;
         rotate = Mathf.RoundToInt(rotate);
         pm.playButton.interactable = true;
+        if (rotation == 0)
+        {
+            moveDirection = new Vector2(1, 0);
+            direction = Direction.right;
+        }
+        else if (rotation == -90)
+        {
+            moveDirection = new Vector2(0, -1);
+            direction = Direction.down;
+        }
+        else if (rotation == -180)
+        {
+            moveDirection = new Vector2(-1, 0);
+            direction = Direction.left;
+        }
+        else
+        {
+            moveDirection = new Vector2(0, 1);
+            direction = Direction.up;
+        }
     }
 }

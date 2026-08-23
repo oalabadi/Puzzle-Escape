@@ -2,7 +2,7 @@
 - Project name: Puzzle-Escape
 - Unity version: Unity 2022.3.62f3
 - Active game object:
-  - Name: Player
-  - Tag: Player
+  - Name: End Level
+  - Tag: Untagged
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

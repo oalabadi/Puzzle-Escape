@@ -26,7 +26,10 @@ public class NextLevel : MonoBehaviour
 
     public void LoadScene()
     {
-        StartCoroutine(LoadNextScene(SceneManager.GetActiveScene().buildIndex + 1));
+        if (SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
+            StartCoroutine(LoadNextScene(SceneManager.GetActiveScene().buildIndex + 1));
+        else
+            Debug.Log("Scene [" + (SceneManager.GetActiveScene().buildIndex + 1) + "] was not found!");
     }
 
     private IEnumerator LoadNextScene(int levelIndex)
