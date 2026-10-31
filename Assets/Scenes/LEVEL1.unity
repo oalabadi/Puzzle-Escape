@@ -36022,6 +36022,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1740380096 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1322450779404422886, guid: 79f0167517d74594393159dbbd82ceed, type: 3}
+  m_PrefabInstance: {fileID: 1906571532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1740811041
 GameObject:
   m_ObjectHideFlags: 0
@@ -39030,6 +39041,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 151781661047113652, guid: 79f0167517d74594393159dbbd82ceed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2082619094}
+    - target: {fileID: 151781661047113652, guid: 79f0167517d74594393159dbbd82ceed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StopPlayer
+      objectReference: {fileID: 0}
     - target: {fileID: 546243363774741550, guid: 79f0167517d74594393159dbbd82ceed, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -39109,6 +39128,14 @@ PrefabInstance:
     - target: {fileID: 546243363774741550, guid: 79f0167517d74594393159dbbd82ceed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322450779404422886, guid: 79f0167517d74594393159dbbd82ceed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2082619094}
+    - target: {fileID: 1322450779404422886, guid: 79f0167517d74594393159dbbd82ceed, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 2569482558902529782, guid: 79f0167517d74594393159dbbd82ceed, type: 3}
       propertyPath: m_Name
@@ -43061,11 +43088,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   startingPos: {x: 0, y: 0, z: 0}
-  playButton: {fileID: 0}
-  stopButton: {fileID: 0}
-  startingDir: 0
-  rb: {fileID: 0}
-  PlayerDirectionArrow: {fileID: 0}
+  playButton: {fileID: 1740380096}
+  stopButton: {fileID: 2105777432}
+  startingDir: 3
+  rb: {fileID: 2082619092}
+  PlayerDirectionArrow: {fileID: 4484929195705542237}
   start: 0
   direction: {x: 0, y: 0}
 --- !u!1 &2085445265
@@ -43768,6 +43795,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2105777432 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 151781661047113652, guid: 79f0167517d74594393159dbbd82ceed, type: 3}
+  m_PrefabInstance: {fileID: 1906571532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2109680965
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,7 +31,6 @@ public class ArrowRotation : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        pm = player.GetComponent<PlayerMovement>();
         if (direction == Direction.right)
         {
             rotation = 0;
@@ -55,6 +54,7 @@ public class ArrowRotation : MonoBehaviour
 
         rotate = rotation;
         transform.rotation = Quaternion.Euler(0, 0, Mathf.RoundToInt(rotate));
+        pm = player.GetComponent<PlayerMovement>();
     }
 
     private void OnMouseEnter()
@@ -113,6 +113,7 @@ public class ArrowRotation : MonoBehaviour
 
     IEnumerator RotateObject()
     {
+        pm = player.GetComponent<PlayerMovement>();
         rotation -= 90;
         isRotating = true;
         pm.playButton.interactable = false;
