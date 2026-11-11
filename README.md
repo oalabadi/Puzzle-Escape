@@ -39,8 +39,6 @@ Sounds
 
 ## Play
 
-Game Status: In development (Level - 5)
-
-You can try the game right now on [Itch.io](https://oalabadi.itch.io/puzzle-escape)
+Game Status: In development
 
 Developed by: Osama
